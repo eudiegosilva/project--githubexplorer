@@ -1,9 +1,13 @@
+import { shade } from 'polished';
 export const colors = {
   background10: '#F0F0F5',
 
   black10: '#000',
   black20: '#3A3A3A',
   white10: '#FFF',
+  green10: '#04D361',
+
+  green20: shade(0.2, '#04D361'),
 };
 
 const defaultFontStyle = {
@@ -16,7 +20,7 @@ export const fontStyles = {
   },
   title: {
     ...defaultFontStyle,
-    fontSize: 30,
+    fontSize: 48,
   },
 };
 
