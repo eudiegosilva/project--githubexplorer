@@ -1,10 +1,14 @@
 import { shade } from 'polished';
 export const colors = {
   background10: '#F0F0F5',
+  placeholder10: '#A8A8B3',
 
   black10: '#000',
   black20: '#3A3A3A',
+  black30: '#3D3D4A',
+  black40: '#A3A8B3',
   white10: '#FFF',
+  white20: '#CBCDB6',
   green10: '#04D361',
 
   green20: shade(0.2, '#04D361'),
