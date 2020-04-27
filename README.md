@@ -27,9 +27,17 @@ Run the app in the development mode by opening [http://localhost:3000](http://lo
 
 ## Main Tecnologies Used
 
-<!-- #### [unform](https://unform.dev/)
+#### [prop-types](https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html)
 
-> To create performance forms. -->
+> To check the data types of my components.
+
+#### [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+
+> To manage the application routing system.
+
+#### [styled-components](https://styled-components.com/)
+
+> To stylize my app as components.
 
 ## About Me
 
