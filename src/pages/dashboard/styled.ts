@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const DashboardContainer = styled.h1``;
 
-interface FormContainerProp {
+interface FormContainerProps {
   hasError: boolean;
 }
 
@@ -15,7 +15,7 @@ export const Title = styled.h1`
 
 export const Logo = styled.img``;
 
-export const FormContainer = styled.form<FormContainerProp>`
+export const FormContainer = styled.form<FormContainerProps>`
   display: flex;
   margin-top: 40px;
   max-width: 700px;
@@ -40,29 +40,29 @@ export const ErrorMessage = styled.span`
 export const RepositoriesContainer = styled.div`
   margin-top: 80px;
   max-width: 700px;
-`;
 
-export const Repository = styled.a`
-  align-items: center;
-  background: ${(props) => props.theme.colors.white10};
-  border-radius: 5px;
-  display: flex;
-  padding: 24px;
-  text-decoration: none;
-  width: 100%;
+  a {
+    align-items: center;
+    background: ${(props) => props.theme.colors.white10};
+    border-radius: 5px;
+    display: flex;
+    padding: 24px;
+    text-decoration: none;
+    width: 100%;
 
-  & + a {
-    margin-top: 16px;
-  }
+    & + a {
+      margin-top: 16px;
+    }
 
-  &:hover {
-    transform: translateX(20px);
-    transition: transform 0.2s;
-  }
+    &:hover {
+      transform: translateX(20px);
+      transition: transform 0.2s;
+    }
 
-  svg {
-    color: ${(props) => props.theme.colors.white20};
-    margin-left: auto;
+    svg {
+      color: ${(props) => props.theme.colors.white20};
+      margin-left: auto;
+    }
   }
 `;
 

@@ -5,8 +5,12 @@ export const colors = {
 
   black10: '#000',
   black20: '#3A3A3A',
-  black30: '#3D3D4A',
+  black30: '#3D3D4D',
   black40: '#A3A8B3',
+  black50: '#737380',
+
+  gray10: '#666666',
+
   white10: '#FFF',
   white20: '#CBCDB6',
   green10: '#04D361',

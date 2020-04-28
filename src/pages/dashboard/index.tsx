@@ -1,11 +1,10 @@
 import React, { useState, FormEvent, useEffect } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
-
+import { Link } from 'react-router-dom';
 import api from 'services/api';
 
-import { logo } from 'assets';
-
 import { InputText, Button } from 'components';
+import { logo } from 'assets';
 
 import {
   DashboardContainer,
@@ -13,7 +12,6 @@ import {
   FormContainer,
   Logo,
   RepositoriesContainer,
-  Repository,
   RepositoryImage,
   RepositoryTextWrapper,
   RepositoryName,
@@ -91,7 +89,10 @@ const Dashboard: React.FC = () => {
 
       <RepositoriesContainer>
         {repositories.map((repository) => (
-          <Repository key={repository.full_name} href="teste">
+          <Link
+            key={repository.full_name}
+            to={`/repositories/${repository.full_name}`}
+          >
             <RepositoryImage
               src={repository.owner.avatar_url}
               alt={repository.owner.login}
@@ -103,7 +104,7 @@ const Dashboard: React.FC = () => {
               </RepositoryDescription>
             </RepositoryTextWrapper>
             <FiChevronRight size={20} />
-          </Repository>
+          </Link>
         ))}
       </RepositoriesContainer>
     </DashboardContainer>
