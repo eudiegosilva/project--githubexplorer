@@ -1,8 +1,11 @@
 import React, { useState, FormEvent, useEffect } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+
 import api from 'services/api';
 
 import { logo } from 'assets';
+
+import { InputText, Button } from 'components';
 
 import {
   DashboardContainer,
@@ -17,8 +20,6 @@ import {
   RepositoryDescription,
   ErrorMessage,
 } from 'pages/dashboard/styled';
-
-import { InputText, Button } from 'components';
 
 interface Repository {
   full_name: string;

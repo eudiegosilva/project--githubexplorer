@@ -23,7 +23,13 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "eslint-plugin-import-helpers"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
@@ -43,11 +49,34 @@
         "ts": "never",
         "tsx": "never"
       }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "/styled-components/",
+          "module",
+          "/^pages/",
+          "/^components/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
     ]
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {
+        "paths": ["src"]
+      },
+      "node": {
+        "paths": ["src"]
+      },
+      "babel-plugin-root-import": {
+        "rootPathSuffix": "src"
+      }
     }
   }
 }
