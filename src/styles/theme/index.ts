@@ -10,12 +10,14 @@ export const colors = {
   white10: '#FFF',
   white20: '#CBCDB6',
   green10: '#04D361',
-
   green20: shade(0.2, '#04D361'),
+
+  error10: '#C53030',
 };
 
 const defaultFontStyle = {
   fontWeight: 300,
+  fontSize: 16,
 };
 
 export const fontStyles = {

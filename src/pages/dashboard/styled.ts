@@ -1,20 +1,40 @@
 import styled from 'styled-components';
 export const DashboardContainer = styled.h1``;
 
+interface FormContainerProp {
+  hasError: boolean;
+}
+
 export const Title = styled.h1`
-  font-size: 48px;
   color: ${(props) => props.theme.colors.black20};
+  font-size: 48px;
+  line-height: 56px;
   margin-top: 80px;
   max-width: 450px;
-  line-height: 56px;
 `;
 
 export const Logo = styled.img``;
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.form<FormContainerProp>`
+  display: flex;
   margin-top: 40px;
   max-width: 700px;
-  display: flex;
+
+  input {
+    border: 2px solid
+      ${(props) =>
+        props.hasError
+          ? props.theme.colors.error10
+          : props.theme.colors.white10};
+    border-right: 0;
+  }
+`;
+
+export const ErrorMessage = styled.span`
+  color: ${(props) => props.theme.colors.error10};
+  display: block;
+  margin-top: 8px;
+  ${(props) => props.theme.fontStyles.default};
 `;
 
 export const RepositoriesContainer = styled.div`
@@ -23,15 +43,13 @@ export const RepositoriesContainer = styled.div`
 `;
 
 export const Repository = styled.a`
+  align-items: center;
   background: ${(props) => props.theme.colors.white10};
   border-radius: 5px;
-  width: 100%;
-  padding: 24px;
-  display: block;
-  text-decoration: none;
-
   display: flex;
-  align-items: center;
+  padding: 24px;
+  text-decoration: none;
+  width: 100%;
 
   & + a {
     margin-top: 16px;
@@ -43,28 +61,29 @@ export const Repository = styled.a`
   }
 
   svg {
-    margin-left: auto;
     color: ${(props) => props.theme.colors.white20};
+    margin-left: auto;
   }
 `;
 
-export const RepositoryImage = styled.img`
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+export const RepositoryTextWrapper = styled.div`
+  margin: 0 16px;
+  flex: 1;
 `;
 
-export const RepositoryTextWrapper = styled.div`
-  margin-left: 16px;
+export const RepositoryImage = styled.img`
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
 `;
 
 export const RepositoryName = styled.strong`
-  font-size: 20px;
   color: ${(props) => props.theme.colors.black30};
+  font-size: 20px;
 `;
 
 export const RepositoryDescription = styled.p`
-  font-size: 16px;
   color: ${(props) => props.theme.colors.black40};
+  font-size: 16px;
   margin-top: 4px;
 `;
