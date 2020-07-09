@@ -1,9 +1,4 @@
-# codefolio | github explorer
-
-## About This Project
-
-<!-- [React Hooks](https://pt-br.reactjs.org/docs/hooks-overview.html).
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started). To learn React, check out the [React documentation](https://reactjs.org/). -->
+# application | GITHUB EXPLORER
 
 ## Avaliable Scripts
 
